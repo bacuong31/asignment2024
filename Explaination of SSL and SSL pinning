@@ -1,0 +1,12 @@
+I)SSL
+  1)Định nghĩa
+    SSL là viết tắt của “Secure Socket Layer”, là một công nghệ bảo mật tiêu chuẩn để thiết lập kết nối được mã hóa giữa client và server. SSL đảm bảo dữ liệu được truyền giữa client và server được bảo mật và toàn vẹn.
+  2)Cách thức hoạt động
+    SSL hoạt động bằng cách mã hóa dữ liệu trước khi truyền đi giữa client và server => dữ liệu không thể đọc được từ bên ngoài 
+  3)Chứng chỉ SSL
+    Chứng chỉ SSL được phát hành bởi các tổ chức CA (Certificate Authority) dùng để xác thực độ an toàn của server. Một server có chứng chỉ SSL đảm bảo các kết nối tới nó là an toàn.
+II)SSL Pinning
+  1)Định nghĩa
+    SSL Pinning là một kỹ thuật được sử dụng nhằm ngăn chặn MITM (Man-in-the-middle) tấn công. Khi chúng ta kết nối đến server thông qua HTTPS(SSL/TLS), server sẽ gửi chứng chỉ SSL để client xác thực danh tính của nó. Nếu chứng chỉ SSL nào client cũng tin tưởng thì dẫn đến dữ liệu dễ bị tấn công.
+  2)Cách thức hoạt động
+    Client sẽ nhúng một hoạt nhiều chứng chỉ SSL vào trong code. Khi kết nối đến server, client chỉ tin tưởng các chứng chỉ SSL mà nó đã nhúng. => Giúp ngăn chặn các chứng chỉ SSL giả mạo.
